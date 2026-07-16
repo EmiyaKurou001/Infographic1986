@@ -132,6 +132,52 @@
   .dot-nav button:hover .tip{opacity:1;}
   @media (max-width:760px){.dot-nav{display:none;}}
 
+  /* ---------- group members ---------- */
+  .group-bar{
+    background:var(--xanh-ngoc-deep);
+    color:var(--paper-light);
+    padding:16px 0;
+  }
+  .group-bar-inner{
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .group-label{
+    font-family:var(--ff-mono);font-size:0.72rem;letter-spacing:0.15em;
+    text-transform:uppercase;color:var(--vang-lua-soft);white-space:nowrap;
+    flex:none;
+  }
+  .group-divider{width:1px;height:24px;background:rgba(255,255,255,0.2);flex:none;}
+  .group-members{
+    display:flex;gap:6px 20px;flex-wrap:wrap;
+    font-family:var(--ff-mono);font-size:0.8rem;color:rgba(246,239,220,0.85);
+  }
+  .group-member{display:flex;align-items:center;gap:7px;}
+  .group-member .gname{color:var(--paper-light);font-weight:600;}
+  .group-member .gid{color:var(--vang-lua-soft);font-size:0.72rem;}
+  @media (max-width:600px){
+    .group-bar-inner{gap:12px;}
+    .group-divider{display:none;}
+  }
+
+  /* ---------- ai tools section ---------- */
+  .section-ai{background:var(--paper-deep);padding:56px 0 64px;}
+  .ai-grid{display:flex;gap:18px;flex-wrap:wrap;}
+  .ai-card{
+    background:var(--paper-light);border:1.5px solid var(--rule);border-radius:8px;
+    padding:20px 22px;display:flex;align-items:center;gap:16px;
+    box-shadow:var(--shadow-soft);flex:1;min-width:220px;
+  }
+  .ai-logo{
+    width:44px;height:44px;border-radius:10px;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--ff-display);font-weight:900;font-size:1.1rem;
+  }
+  .ai-logo.claude{background:#D97041;color:#fff;}
+  .ai-logo.gemini{background:#1A73E8;color:#fff;}
+  .ai-info h4{font-family:var(--ff-display);font-weight:700;font-size:1rem;margin:0 0 3px;}
+  .ai-info p{font-family:var(--ff-mono);font-size:0.8rem;color:var(--ink-soft);margin:0;}
+  @media (max-width:560px){.ai-card{min-width:100%;}}
+
   /* ---------- tear / perforation divider ---------- */
   .tear-divider{
     height:30px;background:var(--do-tem-deep);position:relative;
@@ -466,6 +512,22 @@
   </div>
 </header>
 
+<!-- GROUP MEMBERS BAR -->
+<div class="group-bar">
+  <div class="container">
+    <div class="group-bar-inner">
+      <span class="group-label">Nhóm thực hiện</span>
+      <div class="group-divider"></div>
+      <div class="group-members">
+        <div class="group-member"><span class="gname">Hà Đức Hiếu</span><span class="gid">SE162091</span></div>
+        <div class="group-member"><span class="gname">Vũ Đăng Khoa</span><span class="gid">SE184510</span></div>
+        <div class="group-member"><span class="gname">Võ Nguyễn Nhật Minh</span><span class="gid">SS171142</span></div>
+        <div class="group-member"><span class="gname">Nguyễn Phương Mỹ Thuận</span><span class="gid">SE171113</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="tear-divider"></div>
 
 <!-- ================= SECTION 1 ================= -->
@@ -737,6 +799,30 @@
         <div class="ba-stat">ASEAN · Mỹ · WTO</div>
         <div class="ba-desc">Gia nhập ASEAN (1995), bình thường hóa quan hệ với Hoa Kỳ (1995), gia nhập WTO (2007).</div>
         <div class="ba-bar-track"><div class="ba-bar-fill" data-width="85"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI TOOLS ================= -->
+<section class="section-ai">
+  <div class="container">
+    <p class="eyebrow">Công cụ hỗ trợ</p>
+    <h2 class="section-title" style="font-size:clamp(1.3rem,2.4vw,1.9rem);margin-bottom:28px;">AI sử dụng trong quá trình thực hiện</h2>
+    <div class="ai-grid" data-reveal>
+      <div class="ai-card">
+        <div class="ai-logo claude">C</div>
+        <div class="ai-info">
+          <h4>Claude</h4>
+          <p>Anthropic · Nghiên cứu nội dung &amp; thiết kế infographic</p>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-logo gemini">G</div>
+        <div class="ai-info">
+          <h4>Gemini</h4>
+          <p>Google · Hỗ trợ tra cứu &amp; tổng hợp tài liệu</p>
+        </div>
       </div>
     </div>
   </div>
